@@ -36,6 +36,7 @@ nav input:focus {
   background-position: left 24px top 50%;
   background-repeat: no-repeat;
 
+  margin-bottom: 0;
   padding-left: 52px;
 }
 

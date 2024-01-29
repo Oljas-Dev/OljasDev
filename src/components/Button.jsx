@@ -1,12 +1,17 @@
+import PropTypes from "prop-types";
+
 import styles from "./Button.module.css";
 
-function Button() {
+Button.propTypes = {
+  type: PropTypes.string,
+  onClick: PropTypes.func,
+  children: PropTypes.element,
+};
+
+function Button({ children, type, onClick }) {
   return (
-    <button className={styles.btn}>
-      <span>
-        <img src="./add-white.png" alt="+" />
-      </span>
-      Add
+    <button className={styles[type]} onClick={onClick}>
+      {children}
     </button>
   );
 }

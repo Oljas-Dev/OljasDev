@@ -1,0 +1,83 @@
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 30px;
+
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  margin-bottom: 18px;
+}
+
+.flex span {
+  max-width: 25%;
+}
+
+.flex input {
+  max-width: fit-content;
+  margin: 0;
+}
+
+.flexEnd {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(33, 33, 33, 0.6);
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.editPanel {
+  display: flex;
+  gap: 20px;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 28px;
+}
+
+.tagColorPurple {
+  background: #b39ddb;
+}
+.tagColorGreen {
+  background: #a5d6a7;
+}
+.tagColorYellow {
+  background: #ffcc80;
+}
+
+/* Icons */
+
+.edit,
+.delete {
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+}
+
+.edit {
+  background-image: url(../../public/edit.png);
+}
+.delete {
+  background-image: url(../../public/delete-rounded.png);
+}

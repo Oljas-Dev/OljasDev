@@ -1,9 +1,17 @@
-import Nav from "./Nav";
+import PropTypes from "prop-types";
 
-function Homepage() {
+import Nav from "./Nav";
+import NoteList from "./NoteList";
+
+Homepage.propTypes = {
+  notes: PropTypes.array,
+};
+
+function Homepage({ notes }) {
   return (
     <main>
       <Nav />
+      <NoteList notes={notes} />
     </main>
   );
 }
