@@ -11,7 +11,7 @@ FormAddNote.propTypes = {
 
 function FormAddNote({ onAddNote }) {
   const [title, setTitle] = useState("");
-  const [section, setSection] = useState("");
+  const [section, setSection] = useState("personal");
   const [description, setDescription] = useState("");
 
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ function FormAddNote({ onAddNote }) {
     if (!title || !description) return;
 
     const newNote = {
-      id: new Date().toString(),
+      id: new Date().getTime(),
       section: section,
       title: title,
       description: description,
@@ -70,9 +70,7 @@ function FormAddNote({ onAddNote }) {
               value={section}
               onChange={(e) => setSection(e.target.value)}
             >
-              <option value={"personal"} default>
-                Personal
-              </option>
+              <option value={"personal"}>Personal</option>
               <option value={"home"}>Home</option>
               <option value={"busyness"}>Busyness</option>
             </select>

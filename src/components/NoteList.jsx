@@ -11,9 +11,10 @@ function NoteList({ notes }) {
   return (
     <section>
       <div className={styles.list}>
-        {notes.map((note) => (
-          <Note note={note} key={note.id} />
-        ))}
+        {notes
+          .map((note) => <Note note={note} key={note.id} />)
+          .slice()
+          .sort((n1, n2) => (n2.date < n1.date ? +1 : -1))}
       </div>
     </section>
   );
